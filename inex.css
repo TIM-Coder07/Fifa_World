@@ -68,7 +68,6 @@
 }
 
 .upcoming_right {
-    background-color: olive;
     flex: 1;
 
 } 
@@ -86,7 +85,6 @@
 
 .up_coming_left a.active {
   color: white;
-  background-color: #1e40af; /* Indigo color */
   border-radius: 4px;
 }
 
@@ -94,6 +92,45 @@
     background-color: red;
     color: aliceblue;
     transition: calc(1s);
+}
+/* **************Upcomming card */
+.upcoming_right{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.upcoming_right .card{
+    border: 1px solid rgb(232, 232, 232);
+    margin: 10px;
+    border-radius: 10px 10px 0 0;
+}
+.card img{
+    height: 100px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.upcoming_right .card .card_body{
+    padding: 20px ;
+}
+
+.card button{
+    color: black;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+.card h2{
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card_span{
+    display: flex;
+    gap: 15px;
+    color: #161616;
 }
 
 /* *****************COMMON CSS*********************** */
