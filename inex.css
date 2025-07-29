@@ -23,6 +23,7 @@
 
 .banner_left {
     padding-left: 45px;
+    flex: 1;
 
 }
 
@@ -37,7 +38,6 @@
     margin: 35px 0;
     width: 400px;
     text-align: justify;
-
 }
 
 .banner_left a {
@@ -45,8 +45,16 @@
     text-decoration: none;
 }
 
+.banner_right {
+    flex: 1;
+}
+
 .banner_right img {
     display: block;
+}
+
+img {
+    max-width: 100%;
 }
 
 /* **************************up_coming_*********** */
@@ -64,13 +72,13 @@
     padding: 15px;
     width: 25%;
     margin-right: 25px;
-    
+
 }
 
 .upcoming_right {
     flex: 1;
 
-} 
+}
 
 .up_coming_left a {
     background-color: white;
@@ -84,50 +92,53 @@
 }
 
 .up_coming_left a.active {
-  color: white;
-  border-radius: 4px;
+    color: white;
+    border-radius: 4px;
 }
 
-.up_coming_left a.active,.up_coming_left :hover {
+.up_coming_left a.active,
+.up_coming_left :hover {
     background-color: red;
     color: aliceblue;
     transition: calc(1s);
 }
+
 /* **************Upcomming card */
-.upcoming_right{
+.upcoming_right {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.upcoming_right .card{
+.upcoming_right .card {
     border: 1px solid rgb(232, 232, 232);
     margin: 10px;
     border-radius: 10px 10px 0 0;
 }
-.card img{
+
+.card img {
     height: 100px;
     width: 100%;
     border-radius: 10px 10px 0 0;
 }
 
-.upcoming_right .card .card_body{
-    padding: 20px ;
+.upcoming_right .card .card_body {
+    padding: 20px;
 }
 
-.card button{
+.card button {
     color: black;
     padding: 5px 10px;
     border-radius: 10px;
     margin: 10px auto;
 }
 
-.card h2{
+.card h2 {
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: 600;
 }
 
-.card_span{
+.card_span {
     display: flex;
     gap: 15px;
     color: #161616;
@@ -140,4 +151,73 @@
     border-radius: 10px;
     font-weight: 600;
     color: white;
+}
+
+
+
+/* ********************RESPONSIVE*************************** */
+/*Laptop */
+@media (max-width: 992px) {
+
+    /* *******************banner  */
+        .banner_left h3 {
+            font-size: 30px;
+            font-weight: 400;
+            width: 300px;
+            line-height: 35px;
+        }
+
+        .banner_left p {
+            /* margin: 35px 0; */
+            width: 300px;
+            text-align: justify;
+        }
+
+    /* *****************Up coming match */
+    .Upcoming_match {
+        flex-direction: column;
+    }
+
+    .up_coming_left {
+        flex-direction: row;
+        width: 100%;
+        background: transparent;
+    }
+
+    .up_coming_left a {
+        border: 1px solid rgb(232, 232, 232);
+    }
+
+    .up_coming_left a {
+        margin-right: 10px;
+    }
+
+    .up_coming_left>* {
+        flex: 1;
+    }
+
+    .upcoming_right {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+
+@media  (max-width: 768px) {
+    .banner{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner .banner_left{
+        margin-bottom: 50px;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+    .banner .banner_left{
+        /* max-width: 100%; */
+        margin: 15 auto;
+    }
+
+
 }
